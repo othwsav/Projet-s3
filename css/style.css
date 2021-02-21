@@ -161,6 +161,13 @@ main section.mid.inverted {
 main section.mid.inverted:nth-of-type(3) {
   background: linear-gradient(135deg, #202135 40%, #1a276b);
 }
+main section.mid.inverted .container .image img {
+  position: relative;
+  z-index: 2;
+}
+main section.mid.inverted .container .image::before {
+  z-index: 1;
+}
 main section.mid.inverted .container .content h2 {
   color: white;
 }

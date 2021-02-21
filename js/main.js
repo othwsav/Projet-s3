@@ -20,7 +20,7 @@ let getSiblings =  e => {
 };
 
 // scroll to section when clicking on nav link
-[...$$(".nav_links a")].map(el => {
+[...$$(`[data-to]`)].map(el => {
     el.addEventListener('click', e => {
         $(`#${e.target.getAttribute("data-to")}`).scrollIntoView({ behavior: 'smooth' });
     })

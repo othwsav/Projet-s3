@@ -175,6 +175,15 @@ main{
                 background: linear-gradient(135deg, $pr 40%, #1a276b);
             }
             .container{
+                .image{
+                    img{
+                        position: relative;
+                        z-index: 2;
+                    }
+                    &::before{
+                        z-index: 1;
+                    }
+                }
                 .content{
                     h2{
                         color: white;

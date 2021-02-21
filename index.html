@@ -103,17 +103,18 @@
             <div class="container">
                 <div class="form">
                     <h3>Give it a try</h3>
-                    <form>
+                    <form action="POST" data-netlify="true">
                         <div class="name">
-                            <input type="text" placeholder="First name" required>
-                            <input type="text" placeholder="Last name" required>
+                            <input name="firstname" type="text" placeholder="First name" required>
+                            <input name="lastname" type="text" placeholder="Last name" required>
                         </div>
                         <input type="email" name="email" placeholder="Email" required>
                         <input type="tel" name="phone" placeholder="Phone number" required>
                         <div class="pass">
                             <input type="password" name="pass" placeholder="Password" required>
-                            <input type="password" name="pass" placeholder="Repeat Password" required>
+                            <input type="password" name="pass2" placeholder="Repeat Password" required>
                         </div>
+                        <div data-netlify-recaptcha="true"></div>
                         <input class="button" type="submit" value="Sign Up"></input>
                     </form>
                 </div>

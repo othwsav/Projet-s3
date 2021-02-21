@@ -1,0 +1,275 @@
+:root {
+  --primary-color: #202135;
+  --secondary-color: #5b77f5;
+  --headers-color: #3d3c44;
+  --text-color: #918f9d;
+  --border-radius: 3px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #5b77f5;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+body * {
+  font-family: "Montserrat";
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.image {
+  position: relative;
+}
+.image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.5);
+  background: radial-gradient(rgba(91, 119, 245, 0.3), transparent 70%);
+  z-index: -1;
+}
+
+section.mid {
+  height: 800px;
+  padding: 25px;
+  display: flex;
+}
+
+main section#home {
+  height: 800px;
+  position: relative;
+}
+main section#home::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%);
+  background: linear-gradient(45deg, #202135 40%, #1a276b);
+}
+main section#home .fixed {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  top: -400px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.85);
+  transition: all 0.65s;
+}
+main section#home .fixed.show {
+  top: 0;
+}
+main section#home .fixed nav {
+  border-bottom-color: rgba(91, 119, 245, 0.5);
+}
+main section#home .fixed .logo {
+  color: #3d3c44;
+}
+main section#home .fixed .nav_links a:hover, main section#home .fixed .nav_links a.active {
+  color: #3d3c44;
+}
+main section#home nav {
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(145, 143, 157, 0.5);
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 320px auto;
+}
+main section#home nav .logo {
+  color: white;
+  padding: 10px;
+  font-weight: 900;
+  text-align: center;
+}
+main section#home nav .logo span.small {
+  color: #918f9d;
+  font-weight: 400;
+  font-size: smaller;
+  display: block;
+}
+main section#home nav .nav_links {
+  justify-self: right;
+  align-self: center;
+}
+main section#home nav .nav_links a {
+  text-decoration: none;
+  color: #5b77f5;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+main section#home nav .nav_links a:hover, main section#home nav .nav_links a.active {
+  color: white;
+}
+main section#home header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+main section#home header .content h1 {
+  font-size: 2.6em;
+  color: white;
+}
+main section#home header .content p {
+  color: #918f9d;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+main section#home header .content button {
+  border-radius: 3px;
+  background: #5b77f5;
+  padding: 20px 30px;
+  color: white;
+  border: none;
+  font-weight: 500;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+main section#home header .content button:hover {
+  background: #6e87f6;
+}
+main section#home header .image {
+  transform: translateY(100px);
+}
+main section.mid.inverted {
+  background: linear-gradient(45deg, #202135 40%, #1a276b);
+}
+main section.mid.inverted:nth-of-type(3) {
+  background: linear-gradient(135deg, #202135 40%, #1a276b);
+}
+main section.mid.inverted .container .content h2 {
+  color: white;
+}
+main section.mid .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 20px;
+}
+main section.mid .container .image {
+  width: 500px;
+  justify-self: center;
+}
+main section.mid .container .content {
+  max-width: 70%;
+  justify-self: center;
+}
+main section.mid .container .content h2 {
+  font-size: 2.2em;
+  color: #3d3c44;
+}
+main section.mid .container .content p {
+  font-size: 1.5em;
+  color: #918f9d;
+  text-align: justify;
+}
+main section#signup {
+  background: linear-gradient(45deg, #202135 40%, #1a276b);
+  padding-top: 20px;
+}
+main section#signup .form {
+  padding: 40px 0 80px;
+}
+main section#signup .form h3 {
+  color: white;
+  font-size: 2.6em;
+  text-align: center;
+}
+main section#signup .form form {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+}
+main section#signup .form form .name, main section#signup .form form .pass {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+main section#signup .form form input {
+  padding: 20px 30px;
+  font-size: 1.5em;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  transition: all 0.4s;
+}
+main section#signup .form form input:focus {
+  outline: none;
+  border: 2px solid #5b77f5;
+}
+main section#signup .form form input.button {
+  background: #5b77f5;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+main section#signup .form form input.button:hover {
+  background: #6e87f6;
+}
+main section#signup footer {
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(145, 143, 157, 0.5);
+  color: #918f9d;
+  font-weight: 300;
+}
+main section#signup footer > span:first-child {
+  justify-self: left;
+}
+main section#signup footer > span:first-child a {
+  color: #5b77f5;
+}
+main section#signup footer div {
+  justify-self: center;
+  text-align: center;
+}
+main section#signup footer div span {
+  text-decoration: underline;
+  position: relative;
+}
+main section#signup footer div span:not(:last-child) {
+  margin-right: 35px;
+}
+main section#signup footer div span:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #918f9d;
+  border-radius: 50%;
+  top: 7px;
+  right: -20px;
+}
+main section#signup footer > span:last-child {
+  justify-self: right;
+}
+
+/*# sourceMappingURL=style.css.map */
